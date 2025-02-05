@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr ">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <title> document</title>
+ 
+</head>
+    <body> 
+                    
+       <script>
+        function sortDeCombat ( attaquant,defenseur,puissance,precision){
+            if (puissance <1 || puissance >100){
+                console.log("puissance  prise en compte");
+            }else{    console.log("puissance  pas prise en compte");
+            }
+            if(precision<0.5){
+                console.log(`le sort de ${defenseur} a echouer`); }
+
+             let degats = puissance*precision
+            
+          console.log(`${attaquant} lance un sort contre ${defenseur} .les degats causés sont de ${degats}`)
+
+        }
+
+        
+        console.log(sortDeCombat("sami","voldemort",80,0.9))
+        console.log(sortDeCombat("sami","lulu",200,0.1))
+        console.log(sortDeCombat("sami","voldemort",80,0.4))
+        console.log(sortDeCombat("ayodele","luffy",20,0.5))   
+        console.log(sortDeCombat("ayodele","luffy",20,0.7))        
+
+        
+
+       </script>   
+
+
+    </body>
+</html>
