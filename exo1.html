@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr ">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <title> document</title>
+ 
+</head>
+    <body> 
+                    
+       <script>
+        function presenter (nom,age,passion,maison){
+            if (typeof(age)=="number") {
+                let nomModifie = nom.charAt(0).toUpperCase() + nom.slice(1);
+            console.log(` Je m'appelle ${nomModifie} ,j'ai ${22} ans , je suis passionnée de ${passion} et je viens de la maison ${maison}.`);
+
+             } 
+             else { console.log("Erreur l'age n'est pas un nombre.")
+            
+                }  
+         }
+
+        
+
+         presenter("samira",22,"magie","variabledor")
+       </script>   
+
+
+    </body>
+</html>
