@@ -11,25 +11,68 @@
     <body> 
                     
        <script>
-        function traduireSort ( sort, langue){
-            
-            if(langue == "fr" && sort == "Lumos"){
-                console.log("Lumiere");
-             }
-
-             else if(langue == "en" && sort == "Lumiere") {
-                console.log("Lumos");
-            }             
-              else{console.log ("sort inconnu")     
-
-                 }
-
-        }
+        
 
         
-        console.log (traduireSort("Lumos","fr"))
-        console.log (traduireSort("Lumiere","en"))
-        console.log (traduireSort("xyz","fr"))
+        <!DOCTYPE html>
+<html lang="fr ">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <title> document</title>
+ 
+</head>
+    <body> 
+                    
+       <script>
+         function modifierTexte (mot){
+     return mot.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');  
+     }
+     const LIVRE_DE_SORTS= {
+    "lumos":{
+            fr:"lumiere",
+            en:"light"
+    },   
+    "fuego":{
+        fr:"feu",
+        en:"fire"
+    },    
+       "soy":{
+        fr:"soleil",
+        en:"sun"
+    },      
+       "luna":{
+        fr:"lune",
+        en:"moon"
+    },
+    "estrella":{
+        fr:"étoile",
+        en:"star"
+    }
+
+}
+        
+
+
+
+function traduireSort(sort,langue){
+      let sortModifier=modifierTexte(sort)
+      if (LIVRE_DE_SORTS[sortModifier]==undefined) {
+        console.log("Sort inconnu")
+      } else {
+       console.log(LIVRE_DE_SORTS[sortModifier][langue]) 
+      }
+    }
+    traduireSort("LUMOS","fr")
+    traduireSort("SOL","en")
+    traduireSort("ESTRELLA","jp")
+    traduireSort("FUEGO","en")
+    traduireSort("LUMOS","en")
+    traduireSort("MIMI","fr")
+     
+     console.log(modifierTexte("MIMI"))
 
         
        </script>   
